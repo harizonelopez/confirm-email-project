@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    {% load crispy_forms_tags %}
+</head>
+<body>
+    <h2>Welcome! Please sign up or log in.</h2>
+    
+    <h3>Sign Up</h3>
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        {{ signup_form|crispy }}
+        <button type="submit" class="btn-secondary">Sign Up</button>
+    </form>
+
+    <h3>Login</h3>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ login_form|crispy }}
+        <button type="submit" class="btn-secondary">Login</button>
+    </form>
+</body>
+</html>
