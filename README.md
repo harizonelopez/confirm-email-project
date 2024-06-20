@@ -59,17 +59,3 @@ This project is a basic Django application implementing a user authentication sy
 7. **Access the application:**
 
     Open your web browser and go to `http://127.0.0.1:8000/`.
-
-## Configuration
-
-### Email Settings
-
-For email confirmation, you need to configure your email settings in `settings.py`. You can use any email service provider. Here's an example configuration using Gmail:
-
-```python
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your_email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your_email_password'
