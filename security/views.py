@@ -10,7 +10,6 @@ from .forms import SignUpForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 
-
 def home(request):
     if request.user.is_authenticated:
         return render(request, 'home.html')
@@ -21,7 +20,7 @@ def home(request):
         return render(request, 'index.html', {'signup_form': signup_form, 'login_form': login_form})
 
 def signup(request):
-    if request.method == 'POST':
+    if request.method=='POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
@@ -58,7 +57,7 @@ def activate(request, uidb64, token):
         return render(request, 'activation_invalid.html')
 
 def user_login(request):
-    if request.method == 'POST':
+    if request.method=='POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
