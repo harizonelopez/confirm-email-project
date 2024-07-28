@@ -11,8 +11,8 @@ This project is a basic Django application implementing a user authentication sy
 
 ## Requirements
 
-- Python 3.8+
-- Django 3.2+
+- Python 3.0x
+- Django 3.0x
 - `django-crispy-forms` for form handling and Bootstrap 4 integration
 
 ## Installation
@@ -28,7 +28,7 @@ This project is a basic Django application implementing a user authentication sy
 
     ```bash
     python -m venv venv
-    source venv/Scripts/activate  # On Mac use `venv\bin\activate`
+    source venv/scripts/activate  # On Mac use `venv\bin\activate`
     ```
 
 3. **Install dependencies:**
@@ -58,4 +58,4 @@ This project is a basic Django application implementing a user authentication sy
 
 7. **Access the application:**
 
-    Open your web browser and go to `http://127.0.0.1:8000/`.
+    Open your web browser and go to `http://127.0.0.1:8000/`
