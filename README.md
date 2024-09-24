@@ -6,8 +6,8 @@ This project is a basic Django application implementing a user authentication sy
 
 - User registration with email confirmation
 - User login and logout
-- Home page with different views for authenticated and unauthenticated users
-- Form validation using `django-crispy-forms` with Bootstrap 4 styling
+- Home page with various views for authenticated and unauthenticated users
+- Form validation using `django-crispy-forms` with Bootstrap 4 styling features
 
 ## Requirements
 
