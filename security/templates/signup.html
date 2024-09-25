@@ -49,6 +49,11 @@
             line-height: 1.7;
             color: aqua;
         }
+
+        h5 {
+            line-height: 1.5;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -63,6 +68,9 @@
                 {{ form|crispy }}
                 <button type="submit" class="btn btn-secondary">Register</button>
             </form>
+            <section>
+                <h5>Already have an account?<a href="{% url 'login' %}"> Login</a> instead.</h5>
+            </section>
         </section>
 
         <footer>

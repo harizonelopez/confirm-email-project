@@ -10,14 +10,17 @@ from .forms import SignUpForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 
+
 def home(request):
     if request.user.is_authenticated:
         return render(request, 'home.html')
+    """
     else:
         signup_form = SignUpForm()
         login_form = AuthenticationForm()
 
         return render(request, 'index.html', {'signup_form': signup_form, 'login_form': login_form})
+    """
 
 def signup(request):
     if request.method=='POST':

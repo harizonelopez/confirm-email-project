@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'security',
     'crispy_forms',
+    'crispy_bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,11 +128,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.google.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'harizonelopez24@gmail.com'
-EMAIL_HOST_PASSWORD = '207[jksy8392]#'
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'harizonelopez23@gmail.com'
+EMAIL_HOST_PASSWORD = 'lhpn wpww nqea aqda'
+EMAIL_TIMEOUT = 20  # Increase timeout to 20 seconds
 
 
 # Login view
@@ -148,8 +151,4 @@ LOGIN_URL = 'login'
 
 # cripsy_template pack
 CRISPY_TEMPLATE_PACK = 'bootstrap4'  
-
-
-# crispy template
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
