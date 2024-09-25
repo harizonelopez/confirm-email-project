@@ -14,13 +14,6 @@ from django.contrib.auth.forms import AuthenticationForm
 def home(request):
     if request.user.is_authenticated:
         return render(request, 'home.html')
-    """
-    else:
-        signup_form = SignUpForm()
-        login_form = AuthenticationForm()
-
-        return render(request, 'index.html', {'signup_form': signup_form, 'login_form': login_form})
-    """
 
 def signup(request):
     if request.method=='POST':
@@ -73,3 +66,7 @@ def user_login(request):
         form = AuthenticationForm()
 
     return render(request, 'login.html', {'form': form})
+
+# still in development
+def logout():
+    return redirect('signup')
