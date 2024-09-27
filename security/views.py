@@ -7,8 +7,9 @@ from django.utils.encoding import force_bytes, force_str
 from django.core.mail import EmailMessage
 from django.contrib.auth.tokens import default_token_generator
 from .forms import SignUpForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib import messages
 
 
 def home(request):
@@ -67,6 +68,7 @@ def user_login(request):
 
     return render(request, 'login.html', {'form': form})
 
-# still in development
-def logout():
-    return redirect('signup')
+def logout_user(request):
+    logout(request)  
+    return redirect('signup') 
+

@@ -53,6 +53,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+# Default session backend
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  
+
 ROOT_URLCONF = 'security_project.urls'
 
 TEMPLATES = [
@@ -142,7 +147,7 @@ LOGIN_REDIRECT_URL = 'home'
 
 
 # Logout view
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'signup'
 
 
 # Default route
