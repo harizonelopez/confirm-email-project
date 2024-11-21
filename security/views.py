@@ -9,7 +9,6 @@ from django.contrib.auth.tokens import default_token_generator
 from .forms import SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib import messages
 
 
 def home(request):
