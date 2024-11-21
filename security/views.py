@@ -10,7 +10,6 @@ from .forms import SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 
-
 def home(request):
     if request.user.is_authenticated:
         return render(request, 'home.html')
@@ -70,4 +69,3 @@ def user_login(request):
 def logout_user(request):
     logout(request)  
     return redirect('signup') 
-
